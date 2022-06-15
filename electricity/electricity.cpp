@@ -66,12 +66,7 @@ Generator::Generator(const std::string& name)
 const Pole* Switch::getPole(const string& name) const
 {
     if (name == a1.name)
-        return &a1;
-    if (name == a2.name)
-        return &a2;
-    return nullptr;
-}
-
+	@@ -40,6 +75,54 @@ const Pole* Switch::getPole(const string& name) const
 const Pole* Switch::getPole(size_t idx) const
 {
     // TODO
@@ -126,11 +121,7 @@ const Pole* Generator::getPole(const string& name) const
     return nullptr;
 }
 
-int main()
-{
-    Switch sw, sw2;
-    sw.connect("A2", sw2, "A1");
-    cout << "is " << (sw.isConnectedTo(sw2) ? "" : "not ") << "connected" << endl;
+	@@ -51,5 +134,17 @@ int main()
 
     // TODO: создать цепь из генератора, выключателя и светильника
 
